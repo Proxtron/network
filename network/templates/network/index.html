@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    
+<h1>All Posts</h1>
+{% for post in allPostsDescending %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>{{post.author}}</h1>
+                <p>{{post.message}}</p>
+                <p>Posted at: {{post.timePosted}}</p>
+                <p>Likes: {{post.likeCount}}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
